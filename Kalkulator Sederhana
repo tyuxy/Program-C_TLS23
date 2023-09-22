@@ -1,0 +1,59 @@
+//Program Kalkulator Sederhana//
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    float bilangan1, bilangan2, pilihan;
+    float hasil;
+    string operasi;
+    
+        cout<<  "KALKULATOR SEDERHANA" << endl;
+        cout<<  "Opsi: (pilih sesuai angka)" <<  endl;
+        cout<<  "1. Penjumlahan"    <<  endl;
+        cout<<  "2. Pengurangan"    <<  endl;
+        cout<<  "3. Perkalian"      <<  endl;
+        cout<<  "4. Pembagian"      <<  endl;
+        cout<<  endl;
+        
+        cout<<  "Tulis pilihan disini:";
+        cin>>pilihan;
+      if (pilihan <=4)  {
+        cout<<  "Masukan bilangan pertama : "   <<  endl;
+        cin>>bilangan1;
+        
+        cout<<  "Masukan bilangan kedua : "     <<  endl;
+        cin>>bilangan2;
+      }
+      else {
+             cout<<  "Maaf operator yang anda tulis salah..."    <<  endl;
+      }
+    if (pilihan==1)
+    {
+                        hasil=bilangan1+bilangan2;
+                        operasi='+';
+    }
+        else if (pilihan==2){
+        hasil=bilangan1-bilangan2;
+                        operasi='-';
+        }
+        else if (pilihan==3){
+        hasil=bilangan1*bilangan2;
+                        operasi='*';
+        }
+        else if (pilihan==4){
+        hasil=bilangan1/bilangan2;
+                        operasi='/';
+        }                        
+        
+    else {  
+    cout<<  "error..."    <<  endl;
+    operasi=' ';
+    }
+       cout<<   "___________________________"   <<  endl;
+       cout<<   " " <<  bilangan1   <<  operasi <<  bilangan2   <<"="<< hasil   <<  endl;
+
+return 0;
+}
